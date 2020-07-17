@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Tabs</title>
+  </head>
+  <body>
+    <ul>
+      <li data-tab-target=".Home" class="active">Home</li>
+      <li data-tab-target=".Pricing">Pricing</li>
+      <li data-tab-target=".About">About</li>
+    </ul>
+    <div class="contents">
+      <div class="Home active" data-tab-content>
+        <h1>Home</h1>
+        <p>This the th home page anf it contain info</p>
+      </div>
+      <div class="Pricing" data-tab-content>
+        <h1>Pricing</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+          dicta cumque, voluptatibus ducimus repellat quibusdam laboriosam
+          fugiat at modi quisquam cum similique nemo nesciunt alias, nostrum hic
+          dolorem ab voluptatem.
+        </p>
+      </div>
+      <div class="About" data-tab-content>
+        <h1>About</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non expedita
+          reprehenderit corrupti assumenda, dolorum ipsam architecto?
+          Laudantium, fuga. Iste repellendus asperiores eligendi labore a
+          voluptatum doloremque quisquam inventore vel quas.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
