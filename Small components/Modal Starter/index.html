@@ -4,25 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">  
     <script src="script.js" defer></script>
-    <title>Pop up</title>
+    <title>Modal</title>
   </head>
   <body>
-    <button class="myButton">Open Modal</button>
+    <button class="open_button" data-open-modal="#modal">Open modal</button>
     <div class="modal" id="modal">
-      <div class="modal_header">
-        <h1 class="modal_title">Examble Modal</h1>
-        <button class="closing_button">&times;</button>
-      </div>
-      <div class="modal_body">
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid eos
-          in expedita iste voluptatum, eum quibusdam. Error autem veritatis
-          tenetur nam reiciendis doloremque, laborum, temporibus suscipit, animi
-          totam earum! Corporis.
-        </p>
+      <button data-close-modal class="close_button" >&times;</button>
+      <h3 class="join">join the new frontier</h3>
+      <h2 class="off">10% OFF With email sign up</h2>
+      <div class="email_wrapper">
+        <input type="email" placeholder="email address" class="email" /><button
+         class="submit_btn"
+        >Submit</button>
       </div>
     </div>
-    <div id="overlay"></div>
+
+    <div  id="overlay"></div>
   </body>
 </html>
