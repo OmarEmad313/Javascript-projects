@@ -1,0 +1,94 @@
+:root {
+  --main-1: #c60f7b;
+  --main-2: #f90093;
+  --main-3: rgb(152, 11, 93);
+  --accent-1: #e5ece9;
+  --accent-2: #d6d1cd;
+  --grey-1: rgba(125, 124, 125, 1);
+}
+html {
+  box-sizing: border-box;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Mulish", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 0 5px;
+  margin: 0;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.3);
+  background-color: var(--accent-1);
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 4.2rem;
+}
+.logo {
+  font-family: "Old Standard TT", serif;
+  font-size: 2rem;
+  color: var(--main-1);
+  margin-left: 2rem;
+  flex-grow: 1;
+}
+nav ul {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 4rem;
+}
+nav ul li {
+  text-decoration: none;
+  list-style: none;
+
+  font-size: 1.4rem;
+}
+
+li a {
+  color: var(--grey-1);
+  font-weight: bolder;
+  text-decoration: none;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+section h1 {
+  font-weight: 400;
+  font-size: 3rem;
+}
+.section__home {
+  background: var(--main-2);
+}
+.section__project {
+  background: var(--accent-2);
+}
+.section__contact {
+  background: var(--main-3);
+}
+.section__contact h1 {
+  color: var(--accent-1);
+}
+.header__bubble {
+    transition: all 250ms ease-out;
+  background-color: var(--main-1);
+  position: absolute;
+ border-radius:20% ;
+ height: 2px;
+ top:3.2rem;
+}
