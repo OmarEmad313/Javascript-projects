@@ -69,37 +69,33 @@
         roll() {
           let randomRoll = Math.ceil(Math.random() * 5 + 1);
           this.diceOne = randomRoll;
-           randomRoll = Math.ceil(Math.random() * 5 + 1);
+          randomRoll = Math.ceil(Math.random() * 5 + 1);
           this.diceTwo = randomRoll;
         }
         calculateTotal() {
-          return (this.diceOne + this.diceTwo);
+          return this.diceOne + this.diceTwo;
         }
         whoWins(enemy) {
-          
           if (!typeof enemy === "object") return;
           if (this.calculateTotal() > enemy.calculateTotal()) return this.name;
-          else if (this.calculateTotal() === enemy.calculateTotal()) return "draw";
+          else if (this.calculateTotal() === enemy.calculateTotal())
+            return "draw";
           else {
             return enemy.name;
           }
         }
       }
-      const changeButton=function(won){
-        
-if(won==="true"){
-  playButton.classList.remove("repeat");
-playButton.textContent="Play"
-}
-else if(won==="false"){
-  playButton.classList.add("repeat");
-playButton.textContent="try again"
-}
+      const changeButton = function (won) {
+        if (won === "true") {
+          playButton.classList.remove("repeat");
+          playButton.textContent = "Play";
+        } else if (won === "false") {
+          playButton.classList.add("repeat");
+          playButton.textContent = "try again";
+        }
+      };
 
-
-      }
-
-      const winner = function (playerOne, playerTwo) {
+      const startRoll = function (playerOne, playerTwo) {
         playerOne.roll();
         playerTwo.roll();
         document.querySelector(".player__dice--1").src = `imgs/${
@@ -111,33 +107,38 @@ playButton.textContent="try again"
         document.querySelector(".enemy__dice--1").src = `imgs/${
           redDice[playerTwo.diceOne - 1]
         }.png`;
-         document.querySelector(".enemy__dice--2").src = `imgs/${
+        document.querySelector(".enemy__dice--2").src = `imgs/${
           redDice[playerTwo.diceTwo - 1]
         }.png`;
         return playerOne.whoWins(playerTwo);
       };
       const showResult = function (result, playerName, enemyName) {
-        let win="true";
-       
+        let win = "true";
+
         if (result === null || playerName === null || enemyName === null)
           return;
         const gifs = document.querySelector(".gifs");
         if (result === playerName) {
           gifs.src = resultGifs.win;
         } else if (result === enemyName) {
-          win="false";
+          win = "false";
           gifs.src = resultGifs.lose;
         } else {
-          win="false"
+          win = "false";
           gifs.src = resultGifs.draw;
-        } changeButton(win)
+        }
+        changeButton(win);
       };
 
       var playerDices = new two_dices("player");
       var enemyDices = new two_dices("enemy");
 
       playButton.addEventListener("click", () => {
-        showResult(winner(playerDices, enemyDices), playerDices.name, enemyDices.name);
+        showResult(
+          startRoll(playerDices, enemyDices),
+          playerDices.name,
+          enemyDices.name
+        );
       });
     </script>
   </body>
