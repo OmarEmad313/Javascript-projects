@@ -3,17 +3,21 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #d3cce3; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #e9e4f0,
-    #d3cce3
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #e9e4f0,
-    #d3cce3
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ background:linear-gradient(-45deg,red,green,purple,yellow,blue)0 0/1000% no-repeat;
+ animation: animate 15s ease infinite;
+}
+@keyframes animate{
+  0%{
+background-position: 0% 30%,0 0;
+  }
+  50%{
+background-position: 100% 70%,0 0;
+  }
+  100%
+  {
+    background-position: 0% 30%,0 0;
+  }
+  
 }
 .row {
   width: 100vw;
@@ -65,5 +69,6 @@ section h2 {
   box-shadow: 1px 1px 10px black;
 }
 .repeat {
+  
   background-color: green;
 }
