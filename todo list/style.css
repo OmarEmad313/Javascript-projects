@@ -1,0 +1,158 @@
+:root {
+  --secondary--color: rgb(142, 36, 170);
+  --greys--first: rgb(32, 32, 32);
+  --primary--color: rgb(246, 246, 246);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "Poppins", sans-serif;
+}
+body {
+ 
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 3rem auto;
+}
+header {
+  grid-row: 1/2;
+  grid-column: 1/3;
+}
+nav {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  background-color: var(--secondary--color);
+}
+.sidebar_button_wrapper {
+  height: 60%;
+  margin: 0 2rem;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+.header_btn {
+  background-color: white;
+  width: 24px;
+  height: 2.5px;
+  border: none;
+  border-radius: 10%;
+  position: relative;
+}
+
+.header_btn::before {
+  position: absolute;
+  content: "";
+  background-color: inherit;
+  width: inherit;
+  height: inherit;
+  border: inherit;
+  border-radius: inherit;
+  left: 0;
+  top: 8px;
+}
+.header_btn::after {
+  position: absolute;
+  content: "";
+  background-color: inherit;
+  width: inherit;
+  height: inherit;
+  border: inherit;
+  border-radius: inherit;
+  left: 0;
+  top: -8px;
+}
+
+
+main {
+  padding: 1rem 1rem 1rem 4rem;
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.todos--wrapper{
+ display: flex;
+ flex-direction: column;
+}
+.todo__list{
+list-style: none;
+margin: 1rem 0 0 0 ;
+}
+.todo__item{
+  margin: 1rem 0;
+}
+
+.fa-circle {
+
+  cursor: pointer;
+  font-size: 1rem;
+}
+.fa-circle:hover{
+ scale: 1.1;
+}
+aside{
+  
+    grid-row: 2/3;
+  grid-column: 1/2;background-color: var(--primary--color);
+}
+.collapse {
+grid-row: 2/3;
+grid-column:-1 ;
+}
+.expand {
+  grid-column: 1/3;
+}
+
+
+.projects--wrapper {
+  min-width: 8rem;
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.projects__list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-decoration: none;
+  list-style: none;
+  text-align: left;
+}
+.projects__item {
+  cursor: pointer;
+  padding: 1rem 0rem;
+  margin: 0.6rem 1rem;
+}
+.projects__item:hover{
+  opacity: 0.7;
+}
+.add {
+  
+ align-self: flex-start;
+ width: 80%;
+  padding: 0.7rem 0;
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  border-bottom: 1px solid var(--secondary--color);
+}
+
+.add__btn{
+  background: none;
+  border: none;
+  font-size:0.7rem ;
+}
+.fa-plus {
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 0.7rem;
+}
+
