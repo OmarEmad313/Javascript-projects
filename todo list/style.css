@@ -82,23 +82,44 @@ main {
  flex-direction: column;
 }
 .todo__list{
+  max-width: 80%;
 list-style: none;
 margin: 1rem 0 0 0 ;
 }
 .todo__item{
+  transition: 400ms ease 200ms;
   margin: 1rem 0;
 }
-
+.completed{
+  transform: translateY(100px) rotate(10deg);
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+.fas,.far
+{
+ transition:color 250ms ease;
+}
 .fa-circle {
-
+ 
+margin-right: 0.5rem;
   cursor: pointer;
   font-size: 1rem;
 }
 .fa-circle:hover{
- scale: 1.1;
+transform: scale( 1.1);
+ color:#4CAF50 ;
+}
+.fa-trash{
+ cursor: pointer;
+  float: right;
+
+}
+.fa-trash:hover{
+  transform: scale(1.1);
+  color: #f44336;
 }
 aside{
-  
+  box-shadow: 1px 0px 4px rgba(0,0,0);
     grid-row: 2/3;
   grid-column: 1/2;background-color: var(--primary--color);
 }
