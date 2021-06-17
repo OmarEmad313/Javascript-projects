@@ -59,7 +59,7 @@ section h2 {
 .play__btn {
   background-color: rgb(57, 73, 171);
   font-size: 2rem;
-  color: white;
+  color: white; 
   padding: 0.5rem 1rem;
   cursor: pointer;
   border: none;
